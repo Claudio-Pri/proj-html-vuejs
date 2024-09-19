@@ -6,6 +6,7 @@
   3) Utilizzo del componente
 */
 // 1) Importazione del componente
+import {store} from './store.js';
 import AppHeader from './components/AppHeader.vue';
 import AppMain from './components/AppMain.vue';
 import AppFooter from './components/AppFooter.vue';
@@ -13,7 +14,7 @@ import AppFooter from './components/AppFooter.vue';
 export default {
   data() {
     return { 
-      
+      store,
     }
   },
   // 2) Dichiarazione del componente
