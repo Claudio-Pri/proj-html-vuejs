@@ -47,8 +47,8 @@ export default {
     <div class="header-middle">
       <div class="container">
         <div class="my-row">
-          <div class="my-col-6">footer mid left</div>
-          <div class="my-col-6">footer mid right</div>
+          <div class="my-col-6">header mid left</div>
+          <div class="my-col-6">header mid right</div>
         </div>
       </div>
     </div>
