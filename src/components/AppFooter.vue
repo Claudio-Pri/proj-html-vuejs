@@ -2,18 +2,18 @@
 export default {
   data() {
     return { 
-      message: 'App header'
+      message: 'App footer'
     }
   }
 }
 </script>
 
 <template>
-  <header>
+  <footer>
     <h1>
       {{ message }}
     </h1>
-  </header>
+  </footer>
 </template>
 
 <style lang="scss" scoped>
