@@ -1,5 +1,6 @@
 <script>
 import {store} from '../store.js';
+import AppParagraph from './AppParagraph.vue';
 
 export default {
   data() {
@@ -7,6 +8,9 @@ export default {
       store, 
       message: 'App main'
     }
+  },
+  components: {
+    AppParagraph
   }
 }
 </script>
@@ -20,21 +24,84 @@ export default {
               <h2>
                 Key features
               </h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi unde illo repellendus consequuntur quidem accusantium fugit inventore voluptatibus ratione quae?</p>
+
+              <AppParagraph />
+              
           </div>
         </div>
+
         <div class="my-row">
           <div class="my-col-3">
-            card
+            <div class="card">
+              <div class="features-icon">
+                <i class="fa-solid fa-2x fa-layer-group"></i>
+              </div>
+              <h4>
+                Modular
+              </h4>
+              <p>
+                Composed in a pseudo-latin language which more or less corresponds.
+              </p>
+              <div>
+                <a href="#">
+                  Read More >
+                </a>
+              </div>
+            </div>
           </div>
           <div class="my-col-3">
-            card
+            <div class="card">
+              <div class="features-icon">
+                <i class="fa-solid fa-2x fa-tablet-screen-button"></i>
+              </div>
+              <h4>
+                Responsive
+              </h4>
+              <p>
+                Composed in a pseudo-latin language which more or less corresponds.
+              </p>
+              <div>
+                <a href="#">
+                  Read More >
+                </a>
+              </div>
+            </div>
           </div>
           <div class="my-col-3">
-            card
+            <div class="card">
+              <div class="features-icon">
+                <i class="fa-regular fa-2x fa-object-group"></i>
+              </div>
+              <h4>
+                Customizable
+              </h4>
+              <p>
+                Composed in a pseudo-latin language which more or less corresponds.
+              </p>
+              <div>
+                <a href="#">
+                  Read More >
+                </a>
+              </div>
+            </div>
           </div>
           <div class="my-col-3">
-            card
+            <div class="card">
+              <div class="features-icon">
+                <i class="fa-solid fa-2x fa-maximize"></i>
+              </div>
+              <h4>
+                Scalable
+              </h4>
+              <p>
+                Composed in a pseudo-latin language which more or less corresponds.
+              </p>
+              <div>
+                <a href="#">
+                  Read More >
+                </a>
+              </div>
+            </div>
           </div>
         </div>
         
@@ -132,12 +199,49 @@ export default {
 <style lang="scss" scoped>
 @use '../assets/scss/partials/variables' as *;
 
+main {
+  margin-top: 100px;
+}
+
+#features .card  {
+  border: 1px solid $borderGray;
+  border-radius: 10px;
+  padding: 30px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  h4 {
+    margin-bottom: 20px;
+  }
+  a {
+    text-decoration: none;
+    padding: 4px 0;
+    font-weight:bold;
+    //il colore $textBlue non sembra lo stesso del riferimento, ma neanche il $mainBlue. Problema di schermo?
+    color: $textBlue;
+  }
+}
+#features .card .features-icon {
+  text-align: center;
+  vertical-align: middle;
+
+  //mistero
+  line-height: 75px;
+
+  width: 65px;
+  height: 65px;
+  border: none;
+  border-radius: 5px;
+  background-color: $mainBgblue;
+  color: $mainBlue;
+  margin-bottom: 35px;
+  // box-shadow: 1px 1px 8px 0 $mainBlue;
+}
 
 //debug struttura
-#features .container {
-  min-height: 500px;
-  background-color: lightcoral;
-}
+// #features .container {
+//   min-height: 500px;
+//   background-color: lightcoral;
+// }
 #quick-start .container {
   min-height: 500px;
   background-color: lightgoldenrodyellow;
@@ -153,7 +257,7 @@ export default {
   .card {
     min-height: 250px;
     background-color: aqua;
-  border: 1px solid blue;
+    border: 1px solid blue;
 
   }
 }

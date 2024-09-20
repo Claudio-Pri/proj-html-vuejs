@@ -84,8 +84,15 @@ export default {
           </div>
           
           
+          
         </div>
       </div>
+      <!-- svg curva -->
+      <!-- <div class="custom-shape-divider-top-1726831348">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,0V7.23C0,65.52,268.63,112.77,600,112.77S1200,65.52,1200,7.23V0Z" class="shape-fill"></path>
+        </svg>
+      </div> -->
     </div>
     
   </header>
@@ -156,10 +163,14 @@ header {
 .header-top .search-btn, .header-top .header-btn {
   padding: 8px;
   font-size: 1.2rem;
-  margin-left: 6px;
+  margin-left: 10px;
   height: 40px;
   width: 40px;
   
+}
+.header-middle {
+  padding-top: 100px;
+  padding-bottom: 50px;
 }
 .header-middle .header-middle-left {
   padding: 80px 0;
@@ -178,11 +189,7 @@ header {
     font-size: 2.8rem;
     margin-bottom: 35px;
   }
-  p {
-    font-size: 1.1rem;
-    color: $textGray;
-    margin-bottom: 35px;
-  }
+  
   .btn-container {
     margin-bottom: 20px;
     &.btn-container> * {
@@ -191,10 +198,12 @@ header {
   }
 }
 .header-middle .my-col-6 img {
-  margin-left: 50px;
+  margin-left: 80px;
 }
 
 .header-bottom {
+  position: relative;
+  background-color: white;
   .my-col-2 {
     padding: 40px 0;
     img {
@@ -202,8 +211,33 @@ header {
     }
   }
 }
- header hr {
+header hr {
   border: 1px solid $borderGray;
  }
+
+// .header-bottom {
+//   position: relative;
+//   background-color: white;
+  
+//  }
+// .custom-shape-divider-top-1726831348 {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     overflow: hidden;
+//     line-height: 0;
+    
+// }
+// .custom-shape-divider-top-1726831348 svg {
+//     position: relative;
+//     display: block;
+//     width: calc(100% + 1.3px);
+//     height: 141px;
+// }
+
+// .custom-shape-divider-top-1726831348 .shape-fill {
+//     fill: #F8F9FC;
+// }
 
 </style>
