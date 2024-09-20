@@ -32,23 +32,28 @@ export const store = reactive({
         },
         {
             link: 'google',
-            href: '#'
+            href: '#',
+            img: '/public/img/google.svg'
         },
         {
             link: 'lenovo',
-            href: '#'
+            href: '#',
+            img: '/public/img/lenovo.svg'
         },
         {
             link: 'paypal',
-            href: '#'
+            href: '#',
+            img: '/public/img/paypal.svg'
         },
         {
             link: 'shopify',
-            href: '#'
+            href: '#',
+            img: '/public/img/shopify.svg'
         },
         {
             link: 'spotify',
-            href: '#'
+            href: '#',
+            img: '/public/img/spotify.svg'
         },
     ]
 

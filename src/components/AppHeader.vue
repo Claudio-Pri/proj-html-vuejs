@@ -73,12 +73,14 @@ export default {
         </div>
       </div>
     </div>
-
+    <hr>
     <div class="header-bottom">
       <div class="container">
-        <div class="my-row">
+        <div class="my-row align-items-center">
           <div class="my-col-2" v-for="(link, i) in store.headerBottomLinks" :key="i">
-            link  
+            <a :href="link.href">
+              <img :src="link.img" :alt="link.link">
+            </a>
           </div>
           
           
@@ -192,6 +194,16 @@ header {
   margin-left: 50px;
 }
 
-
+.header-bottom {
+  .my-col-2 {
+    padding: 40px 0;
+    img {
+      max-width: 100px;
+    }
+  }
+}
+ header hr {
+  border: 1px solid $borderGray;
+ }
 
 </style>
