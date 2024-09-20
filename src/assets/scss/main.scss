@@ -65,3 +65,26 @@
 ul {
     list-style: none;
 }
+
+.blue-btn {
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid $mainBlue;
+    background-color: $mainBlue;
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    box-shadow: 2px 2px 8px $mainBlue;
+
+}
+
+.white-btn {
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid $mainBlue;
+    background-color: white;
+    color: $mainBlue;
+    font-size: 1rem;
+    font-weight: 700;
+
+}

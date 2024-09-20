@@ -49,8 +49,27 @@ export default {
     <div class="header-middle">
       <div class="container">
         <div class="my-row">
-          <div class="my-col-6">header mid left</div>
-          <div class="my-col-6">header mid right</div>
+          <div class="my-col-6 header-middle-left">
+            <span class="lable">
+              Development
+            </span>
+            <h1>
+              A Complete <br> Developer Toolset
+            </h1>
+            <p>
+              Launch your campaign and benefit from our expertise on designing and managing conversion centered bootstrap4 html page.
+            </p>
+            <div class="btn-container">
+              <button class="blue-btn">Get Started</button>
+              <button class="white-btn">Documentation</button>
+            </div>
+            <p>
+              Current version: v2.6.0
+            </p>
+          </div>
+          <div class="my-col-6">
+            <img src="/img/about.png" alt="about">
+          </div>
         </div>
       </div>
     </div>
@@ -73,12 +92,6 @@ export default {
 <style lang="scss" scoped>
 @use '../assets/scss/partials/variables' as *;
 
-
-//debug struttura
-// .my-row>* {
-//   background-color: aquamarine;
-//   border: 1px solid red;
-// }
 header {
   background-color: $lightBg;
 }
@@ -132,6 +145,8 @@ header {
     border-radius: 5px;
     background-color: $mainBgblue;
     color: $mainBlue;
+    box-shadow: 1px 1px 8px 0 $mainBlue;
+
     
   }
   
@@ -144,10 +159,39 @@ header {
   width: 40px;
   
 }
-.header-middle .my-row {
-  min-height: 500px;
-  background-color: lightgreen;
+.header-middle .header-middle-left {
+  padding: 80px 0;
+  .lable {
+    border: 1px solid $mainBgblue;
+    border-radius:50px;
+    background-color: $mainBgblue;
+    color: $mainBlue;
+    font-size: 0.8rem;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 15px;
+    padding: 4px 10px;
+  }
+  h1 {
+    font-size: 2.8rem;
+    margin-bottom: 35px;
+  }
+  p {
+    font-size: 1.1rem;
+    color: $textGray;
+    margin-bottom: 35px;
+  }
+  .btn-container {
+    margin-bottom: 20px;
+    &.btn-container> * {
+      margin-right: 15px;
+    }
+  }
 }
+.header-middle .my-col-6 img {
+  margin-left: 50px;
+}
+
 
 
 </style>
