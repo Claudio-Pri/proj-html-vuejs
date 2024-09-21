@@ -123,7 +123,8 @@ export const store = reactive({
 
             ]
         }
-    ]
+    ],
+    userEmail: '',
 
 
 });

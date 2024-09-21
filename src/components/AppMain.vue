@@ -11,7 +11,14 @@ export default {
   },
   components: {
     AppParagraph
-  }
+  },
+  methods: {
+    checkData() {
+      if(store.userEmail.trim() != '') {
+        console.log('userEmail: ', store.userEmail);
+      }  
+    }
+  },
 }
 </script>
 
@@ -242,14 +249,17 @@ export default {
       <div class="container">
         <div class="my-row">
           <div class="my-col-12 text-center">
-            <h4>
+            <h2>
               Want to be among the first to find out?
-            </h4>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum pariatur quo neque laudantium excepturi officiis!
-            </p>
-            <form>
-              form + button
+            </h2>
+
+            <AppParagraph />
+            
+            <form @submit.prevent="checkData()">
+              <input v-model="store.userEmail" type="text" placeholder="Email Address">
+              <button type="submit" class="blue-btn">
+                Get Started
+              </button>
             </form>
           </div>
         </div>
@@ -427,6 +437,34 @@ main {
     }
   }
 }
+
+#action {
+  padding: 50px 0;
+
+  form {
+    display:flex;
+    justify-content: space-between;
+    padding: 5px;
+    border: 1px solid $borderGray;
+    border-radius: 50px;
+    width: 600px;
+    margin: 0 auto;
+    margin-bottom: 80px;
+    input {
+      border: none;
+      font-size: 1.1rem;
+      padding: 10px;
+      border-radius: 50px;
+      flex-grow: 1;
+    }
+    .blue-btn {
+      border-radius: 50px;
+
+    }
+    
+  }
+}
+
 //debug struttura
 // #features .container {
 //   min-height: 500px;
@@ -451,11 +489,11 @@ main {
 
 //   }
 // }
-#action .container {
-  min-height: 500px;
-  background-color: lightcoral;
-  border: 1px solid blue;
-}
+// #action .container {
+//   min-height: 500px;
+//   background-color: lightcoral;
+//   border: 1px solid blue;
+// }
 
 
 </style>
