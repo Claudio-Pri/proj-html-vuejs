@@ -20,5 +20,15 @@ export default {
 <style lang="scss" scoped>
 @use '../assets/scss/partials/variables' as *;
 
+p {
+    font-size: 1.1rem;
+    color: $textGray;
+    margin-bottom: 35px;
+
+    span {
+        color: $mainBlue;
+        font-weight: bold;
+    }
+}
 
 </style>

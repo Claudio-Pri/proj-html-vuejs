@@ -55,7 +55,37 @@ export const store = reactive({
             href: '#',
             img: '/public/img/spotify.svg'
         },
-    ]
+    ],
+    quickStart: [
+        {
+            itemName: 'npm',
+            active: true,
+            commandOne: 'npm install',
+            commandTwo: 'claps.js',
+
+        },
+        {
+            itemName: 'nuget',
+            active: false,
+            commandOne: 'npm get chicken',
+            commandTwo: 'claps.js',
+
+        },
+        {
+            itemName: 'spm',
+            active: false,
+            commandOne: 'npm install qualcosa',
+            commandTwo: 'claps.js',
+
+        },
+        {
+            itemName: 'github',
+            active: false,
+            commandOne: '$ npm install qualcosa',
+            commandTwo: 'claps.js',
+
+        },
+    ],
 
 
 });

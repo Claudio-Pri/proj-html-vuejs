@@ -118,11 +118,35 @@ export default {
             <h2>
               Awesome isn't it? Let's dive in!
             </h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum pariatur quo neque laudantium excepturi officiis!
-            </p>
-            <div>
-              Card bg dark
+            <AppParagraph />
+            <div class="card">
+              <div class=" d-flex justify-content-between lable-container">
+                <div class="card-lable" :class="{'active' : item.active == true}" v-for="(item, i) in store.quickStart" :key="i">
+                  <div>
+                    {{ item.itemName }}
+                  </div>
+                </div>
+              </div>
+              <div v-for="(item, i) in store.quickStart" :key="i">
+                <div class="d-flex" v-if="item.active == true">
+                  <span>$</span>
+                  <p>{{ item.commandOne }}</p>
+                  <span>-g</span>
+                  <p>{{ item.commandTwo }}</p>
+
+                </div>
+              </div>
+              
+            </div>
+            <div class="perks d-flex">
+              <span>
+                <i class="fa-regular fa-circle-check"></i>
+              </span>
+              <p>Organize your data</p>
+              <span>
+                <i class="fa-regular fa-circle-check"></i>
+              </span>
+              <p>Work with any team</p>
             </div>
           </div>
         </div>
@@ -237,15 +261,75 @@ main {
   // box-shadow: 1px 1px 8px 0 $mainBlue;
 }
 
+#quick-start {
+  padding: 50px 0;
+  h4 {
+    color: $mainBlue;
+    margin-bottom: 20px;
+  }
+  .card {
+    max-width: 600px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    color: white;
+    background-color: $mainGray;
+    padding: 30px;
+    border-radius: 8px;
+    .lable-container {
+      background-color: $textGray;
+      border: 1px solid $textGray;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      .card-lable {
+        padding: 10px 30px;
+        width: 25%;
+        font-weight: bold;
+        border-radius: 8px;
+
+        &.active {
+          background-color: $mainGray;
+        }
+
+      }
+
+    }
+    span {
+      color: $textGreen;
+      font-weight: bold;
+      margin-right: 6px;
+    }
+    p {
+      font-weight: bold;
+      margin-right: 10px;
+      margin-bottom: 0;
+
+    }
+  }
+  .perks {
+    max-width: 600px;
+    margin: 0 auto;
+    span {
+      color: $textGreen;
+      font-weight: bold;
+      margin-right: 6px;
+    }
+    p {
+      
+      margin-right: 10px;
+      margin-bottom: 0;
+
+    }
+  }
+}
 //debug struttura
 // #features .container {
 //   min-height: 500px;
 //   background-color: lightcoral;
 // }
-#quick-start .container {
-  min-height: 500px;
-  background-color: lightgoldenrodyellow;
-}
+// #quick-start .container {
+//   min-height: 500px;
+//   background-color: lightgoldenrodyellow;
+// }
 #tools .container .my-col-6 {
   min-height: 500px;
   background-color: lightcoral;
