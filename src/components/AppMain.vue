@@ -156,8 +156,35 @@ export default {
     <section id="tools">
       <div class="container">
         <div class="my-row">
-          <div class="my-col-6">left</div>
-          <div class="my-col-6">right</div>
+          <div class="my-col-6 left-col">
+            <h2>
+              Build tools and extensive documentation
+            </h2>
+            <p>
+              You can combine all the Landrick templates into a single one, you can take a component from the Application theme and use it in the Website.
+            </p>
+            <ul>
+              <li>
+                <i class="fa-regular fa-circle-check"></i>
+                Digital Marketing Solutions for Tomorrow
+              </li>
+              <li>
+                <i class="fa-regular fa-circle-check"></i>
+                Our Talented & Experienced Marketing Agency
+              </li>
+              <li>
+                <i class="fa-regular fa-circle-check"></i>
+                Create your own skin to match your brand
+              </li>
+            </ul>
+            <div class="btn-container">
+              <button class="blue-btn">Read More <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+            
+          </div>
+          <div class="my-col-6">
+            <img src="/img/1.png" alt="tools">
+          </div>
         </div>
       </div>
     </section>
@@ -321,6 +348,30 @@ main {
     }
   }
 }
+
+#tools {
+  padding: 50px 0;
+  .left-col {
+    padding-top: 60px;
+    padding-right: 60px;
+    ul {
+      margin-bottom: 30px;
+      li {
+        margin-bottom: 20px;
+        color: $textGray;
+        i {
+          color: $mainBlue;
+        }
+      }
+    }
+  }
+}
+
+#rates {
+  padding: 50px 0;
+  
+
+}
 //debug struttura
 // #features .container {
 //   min-height: 500px;
@@ -330,11 +381,11 @@ main {
 //   min-height: 500px;
 //   background-color: lightgoldenrodyellow;
 // }
-#tools .container .my-col-6 {
-  min-height: 500px;
-  background-color: lightcoral;
-  border: 1px solid blue;
-}
+// #tools .container .my-col-6 {
+//   min-height: 500px;
+//   background-color: lightcoral;
+//   border: 1px solid blue;
+// }
 #rates .container {
   min-height: 500px;
   background-color: lightgoldenrodyellow;
