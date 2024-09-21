@@ -200,25 +200,38 @@ export default {
         </div>
         <div class="my-row">
           <div class="my-col-12 text-center">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi a nobis commodi hic dolor cupiditate.
-            </p>
+            <AppParagraph />
           </div>
         </div>
+        <!-- Rates card -->
         <div class="my-row">
-          <div class="my-col-4">
+          <div class="my-col-4" v-for="(rate, i) in store.ourRates" :key="i">
             <div class="card">
-              card
-            </div>
-          </div>
-          <div class="my-col-4">
-            <div class="card">
-              card
-            </div>
-          </div>
-          <div class="my-col-4">
-            <div class="card">
-              card
+              <div class="lable">
+                {{ rate.lable }}
+              </div>
+              <h1>
+                {{ rate.price }}
+              </h1>
+              <p>
+                Per Month
+              </p>
+              <p>
+                {{ rate.description }}
+              </p>
+              <hr>
+              <ul>
+                <li v-for="(perk, i) in rate.included" :key="i">
+                  <i class="fa-regular fa-circle-check"></i>
+                  {{ perk }}
+                </li>
+              </ul>
+              <div class="blue-btn text-center">
+                Buy Now
+              </div>
+              <p>
+               *No credit card required 
+              </p>
             </div>
           </div>
         </div>
@@ -369,7 +382,50 @@ main {
 
 #rates {
   padding: 50px 0;
-  
+  .card {
+    border: 1px solid $borderGray;
+    border-radius: 10px;
+    padding: 30px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 0 $lightGray;
+
+    .lable {
+      border: 1px solid $mainBgblue;
+      border-radius:50px;
+      background-color: $mainBgblue;
+      color: $mainBlue;
+      font-size: 0.8rem;
+      font-weight: bold;
+      display: inline-block;
+      margin-bottom: 15px;
+      padding: 8px 20px;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+    p {
+      margin-bottom: 20px;
+    }
+    hr {
+      margin-bottom: 20px;
+      border: 1px solid $borderGray;
+    }
+    ul {
+      margin-bottom: 30px;
+      li {
+        margin-bottom: 15px;
+        color: $textGray;
+        i {
+          color: $mainBlue;
+        }
+      }
+    }
+    .blue-btn {
+        margin-bottom: 20px;
+    }
+  }
 }
 //debug struttura
 // #features .container {
@@ -385,16 +441,16 @@ main {
 //   background-color: lightcoral;
 //   border: 1px solid blue;
 // }
-#rates .container {
-  min-height: 500px;
-  background-color: lightgoldenrodyellow;
-  .card {
-    min-height: 250px;
-    background-color: aqua;
-    border: 1px solid blue;
+// #rates .container {
+//   min-height: 500px;
+//   background-color: lightgoldenrodyellow;
+//   .card {
+//     min-height: 250px;
+//     background-color: aqua;
+//     border: 1px solid blue;
 
-  }
-}
+//   }
+// }
 #action .container {
   min-height: 500px;
   background-color: lightcoral;

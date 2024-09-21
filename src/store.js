@@ -28,32 +28,32 @@ export const store = reactive({
         {
             link: 'amazon',
             href: '#',
-            img: '/public/img/amazon.svg'
+            img: '/img/amazon.svg'
         },
         {
             link: 'google',
             href: '#',
-            img: '/public/img/google.svg'
+            img: '/img/google.svg'
         },
         {
             link: 'lenovo',
             href: '#',
-            img: '/public/img/lenovo.svg'
+            img: '/img/lenovo.svg'
         },
         {
             link: 'paypal',
             href: '#',
-            img: '/public/img/paypal.svg'
+            img: '/img/paypal.svg'
         },
         {
             link: 'shopify',
             href: '#',
-            img: '/public/img/shopify.svg'
+            img: '/img/shopify.svg'
         },
         {
             link: 'spotify',
             href: '#',
-            img: '/public/img/spotify.svg'
+            img: '/img/spotify.svg'
         },
     ],
     quickStart: [
@@ -86,6 +86,44 @@ export const store = reactive({
 
         },
     ],
+    ourRates: [
+        {
+            lable: 'Basic',
+            price: '$9.00',
+            description: 'All the basics for business that are just getting started.',
+            included: [
+                'Full access',
+                'Enhanced Security',
+                'Source Files',
+                '1 Domain Free'
+
+            ]
+        },
+        {
+            lable: 'Business',
+            price: '$39.00',
+            description: 'Better for growing businesses that want more customers.',
+            included: [
+                'Full access',
+                'Enhanced Security',
+                'Source Files',
+                '1 Domain Free'
+
+            ]
+        },
+        {
+            lable: 'Enterprise',
+            price: '$79.00',
+            description: 'Advanced features for pros whoneed more customization.',
+            included: [
+                'Full access',
+                'Enhanced Security',
+                'Source Files',
+                '1 Domain Free'
+
+            ]
+        }
+    ]
 
 
 });
