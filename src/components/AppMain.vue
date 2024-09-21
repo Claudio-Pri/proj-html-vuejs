@@ -370,7 +370,6 @@ main {
 #rates {
   padding: 50px 0;
   
-
 }
 //debug struttura
 // #features .container {
