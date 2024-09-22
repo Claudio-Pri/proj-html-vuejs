@@ -125,6 +125,63 @@ export const store = reactive({
         }
     ],
     userEmail: '',
+    companyLinks: [
+        {
+            link: 'About us',
+            href: '#',
+        },
+        {
+            link: 'Services',
+            href: '#',
+        },
+        {
+            link: 'Team',
+            href: '#',
+        },
+        {
+            link: 'Pricing',
+            href: '#',
+        },
+        {
+            link: 'Project',
+            href: '#',
+        },
+        {
+            link: 'Careers',
+            href: '#',
+        },
+        {
+            link: 'Blog',
+            href: '#',
+        },
+        {
+            link: 'Login',
+            href: '#',
+        },
+    ],
+    usefullLinks: [
+        {
+            link: 'Terms of service',
+            href: '#',
+        },
+        {
+            link: 'Privacy Policy',
+            href: '#',
+        },
+        {
+            link: 'Documentation',
+            href: '#',
+        },
+        {
+            link: 'Changelog',
+            href: '#',
+        },
+        {
+            link: 'Components',
+            href: '#',
+        },
+
+    ],
 
 
 });
