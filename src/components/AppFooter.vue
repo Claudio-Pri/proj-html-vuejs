@@ -92,7 +92,10 @@ export default {
               Write your email <span>*</span>
             </p>
             <form @submit.prevent="checkData()">
-              <div>
+              <div class="input-group d-flex align-items-center">
+                <div class="input-icon">
+                  <i class="fa-regular fa-envelope"></i>
+                </div>
                 <input v-model="store.userEmail" type="text" placeholder="Your email :">
               </div>
               <div>
@@ -190,18 +193,32 @@ footer {
       }
       
       form {
-        input {
-          border: none;
-          font-size: 0.8rem;
-          padding: 10px;
-          border-radius: 5px;
-          width: 100%;
+        .input-group {
           margin-bottom: 25px;
+          font-size: 1.2rem;
           background-color: $tertiaryBgBlue;
-          // how to style placeholder
-
-          
+          padding: 10px;
+          .input-icon {
+            color: $textGray;
+            margin-right: 5px;
+            
+          }
+          input {
+            background-color: $tertiaryBgBlue;
+            border: none;
+            flex-grow: 1;
+            padding: 5px;
+          }
         }
+        // input {
+        //   border: none;
+        //   font-size: 0.8rem;
+        //   padding: 10px;
+        //   border-radius: 5px;
+        //   width: 100%;
+        //   margin-bottom: 25px;
+        //   background-color: $tertiaryBgBlue;
+        // }
         .blue-btn {
           border: none;
           border-radius: 5px;
