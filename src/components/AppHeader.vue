@@ -75,6 +75,7 @@ export default {
     </div>
     <hr>
     <div class="header-bottom">
+      <!-- position relative z-index -->
       <div class="container">
         <div class="my-row align-items-center">
           <div class="my-col-2" v-for="(link, i) in store.headerBottomLinks" :key="i">
@@ -88,11 +89,11 @@ export default {
         </div>
       </div>
       <!-- svg curva -->
-      <!-- <div class="custom-shape-divider-top-1726831348">
+      <div class="custom-shape-divider-top-1726831348">
         <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
             <path d="M0,0V7.23C0,65.52,268.63,112.77,600,112.77S1200,65.52,1200,7.23V0Z" class="shape-fill"></path>
         </svg>
-      </div> -->
+      </div>
     </div>
     
   </header>
@@ -155,6 +156,11 @@ header {
     background-color: $mainBgblue;
     color: $mainBlue;
     box-shadow: 1px 1px 8px 0 $mainBlue;
+    &:hover {
+      background-color: $mainBlue;
+      color: white;
+    
+    }
 
     
   }
@@ -215,29 +221,30 @@ header hr {
   border: 1px solid $borderGray;
  }
 
-// .header-bottom {
-//   position: relative;
-//   background-color: white;
+.header-bottom .container  {
+  position: relative;
+  z-index: 1;
+  // background-color: white;
   
-//  }
-// .custom-shape-divider-top-1726831348 {
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     width: 100%;
-//     overflow: hidden;
-//     line-height: 0;
+ }
+.custom-shape-divider-top-1726831348 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
     
-// }
-// .custom-shape-divider-top-1726831348 svg {
-//     position: relative;
-//     display: block;
-//     width: calc(100% + 1.3px);
-//     height: 141px;
-// }
+}
+.custom-shape-divider-top-1726831348 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 141px;
+}
 
-// .custom-shape-divider-top-1726831348 .shape-fill {
-//     fill: #F8F9FC;
-// }
+.custom-shape-divider-top-1726831348 .shape-fill {
+    fill: #F8F9FC;
+}
 
 </style>

@@ -36,7 +36,7 @@ export default {
               
           </div>
         </div>
-
+        
         <div class="my-row">
           <div class="my-col-3">
             <div class="card">
@@ -398,6 +398,10 @@ main {
     margin-right: 20px;
     margin-bottom: 20px;
     box-shadow: 0 3px 0 $lightGray;
+    &:hover {
+    box-shadow: 0 3px 0 $mainBlue;
+
+    }
 
     .lable {
       border: 1px solid $mainBgblue;
