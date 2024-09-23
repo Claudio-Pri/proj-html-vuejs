@@ -105,12 +105,24 @@ export default {
         </div>
       </div>
     </div>
-    <hr>
+    
     <div class="footer-bottom">
       <div class="container">
         <div class="my-row">
-          <div class="my-col-6">left</div>
-          <div class="my-col-6">right</div>
+          <div class="my-col-6">
+            <p>
+              <i class="fa-regular fa-copyright"></i>
+              2020 Landrick. Design with <span><i class="fa-solid fa-heart"></i></span>
+              by Shreethemes.
+            </p>
+          </div>
+          <div class="my-col-6">
+            <div class="d-flex align-items-center payments">
+              <div v-for="(method, i) in store.paymentMethods" :key="i">
+                <img :src="method.url" :alt="method.lable">
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       
@@ -126,6 +138,7 @@ footer {
   
   .footer-top {
     padding: 50px 0;
+    border-bottom: 1px solid $textGray;
 
       .my-col-4 {
           padding-right: 40px;
@@ -175,11 +188,7 @@ footer {
             }
           }
       }
-      p{
-        span {
-          color: $textRed;
-        }
-      }
+      
       form {
         input {
           border: none;
@@ -209,7 +218,21 @@ footer {
       
       
   }
-
+  p{
+      span {
+        color: $textRed;
+      }
+    }
+  .footer-bottom {
+    padding: 40px 0;
+    .payments {
+      justify-content: end;
+      img {
+        width: 40px;
+        margin-left: 10px;
+      }
+    }
+  }
 }
 
 
@@ -217,8 +240,8 @@ footer {
 //   min-height: 400px;
 //   background-color: darkorchid;
 // }
-.footer-bottom .container {
-  min-height: 100px;
-  background-color: darkmagenta;
-}
+// .footer-bottom .container {
+//   min-height: 100px;
+//   background-color: darkmagenta;
+// }
 </style>

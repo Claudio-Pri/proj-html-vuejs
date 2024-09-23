@@ -298,7 +298,6 @@ main {
   text-align: center;
   vertical-align: middle;
 
-  //mistero
   line-height: 75px;
 
   width: 65px;

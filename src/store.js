@@ -182,6 +182,27 @@ export const store = reactive({
         },
 
     ],
-
+    paymentMethods: [
+        {
+            lable: 'american-express',
+            url: '/img/american-ex.png'
+        },
+        {
+            lable: 'discover',
+            url: '/img/discover.png'
+        },
+        {
+            lable: 'master-card',
+            url: '/img/master-card.png'
+        },
+        {
+            lable: 'pay-pal',
+            url: '/img/paypal.png'
+        },
+        {
+            lable: 'visa',
+            url: '/img/visa.png'
+        },
+    ]
 
 });
