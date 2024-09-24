@@ -5,7 +5,14 @@ export default {
   data() {
     return {
       store, 
-      message: 'App header'
+      message: 'App header',
+      activeIndex: 1,
+    }
+  },
+  methods: {
+    quickActive(i) {
+      console.log('cliccata lable');
+      this.activeIndex = i;
     }
   }
 }
@@ -27,7 +34,7 @@ export default {
             <nav>
               <ul class="d-flex align-items-center">
                 <li v-for="(link, i) in store.headerLinks" :key="i">
-                  <a :class="{'active' : link.active == true}" :href="link.href">
+                  <a @click="quickActive(i)" :class="{'active' : this.activeIndex == i}" :href="link.href">
                     {{ link.link }}
                     <span v-if="i != 0"><i class="fa-solid fa-chevron-down"></i></span>
                   </a>
