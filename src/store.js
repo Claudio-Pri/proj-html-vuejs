@@ -59,28 +59,28 @@ export const store = reactive({
     quickStart: [
         {
             itemName: 'npm',
-            active: true,
+            // active: false,
             commandOne: 'npm install',
             commandTwo: 'claps.js',
 
         },
         {
             itemName: 'nuget',
-            active: false,
+            // active: false,
             commandOne: 'npm get chicken',
             commandTwo: 'claps.js',
 
         },
         {
             itemName: 'spm',
-            active: false,
+            // active: false,
             commandOne: 'npm install qualcosa',
             commandTwo: 'claps.js',
 
         },
         {
             itemName: 'github',
-            active: false,
+            // active: false,
             commandOne: '$ npm install qualcosa',
             commandTwo: 'claps.js',
 

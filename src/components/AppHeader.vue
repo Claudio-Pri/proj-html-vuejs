@@ -75,7 +75,6 @@ export default {
     </div>
     <hr>
     <div class="header-bottom">
-      <!-- position relative z-index -->
       <div class="container">
         <div class="my-row align-items-center">
           <div class="my-col-2" v-for="(link, i) in store.headerBottomLinks" :key="i">
@@ -224,7 +223,6 @@ header hr {
 .header-bottom .container  {
   position: relative;
   z-index: 1;
-  // background-color: white;
   
  }
 .custom-shape-divider-top-1726831348 {

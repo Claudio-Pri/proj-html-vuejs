@@ -1,8 +1,6 @@
 <script>
 import {store} from '../store.js';
 
-
-
 export default {
   data() {
     return {
@@ -196,6 +194,7 @@ footer {
         .input-group {
           margin-bottom: 25px;
           font-size: 1.2rem;
+          border-radius: 5px;
           background-color: $tertiaryBgBlue;
           padding: 10px;
           .input-icon {
@@ -210,15 +209,7 @@ footer {
             padding: 5px;
           }
         }
-        // input {
-        //   border: none;
-        //   font-size: 0.8rem;
-        //   padding: 10px;
-        //   border-radius: 5px;
-        //   width: 100%;
-        //   margin-bottom: 25px;
-        //   background-color: $tertiaryBgBlue;
-        // }
+
         .blue-btn {
           border: none;
           border-radius: 5px;
@@ -252,13 +243,4 @@ footer {
   }
 }
 
-
-// .footer-top .container {
-//   min-height: 400px;
-//   background-color: darkorchid;
-// }
-// .footer-bottom .container {
-//   min-height: 100px;
-//   background-color: darkmagenta;
-// }
 </style>

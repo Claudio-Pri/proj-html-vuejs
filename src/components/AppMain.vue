@@ -2,21 +2,28 @@
 import {store} from '../store.js';
 import AppParagraph from './AppParagraph.vue';
 
+
 export default {
   data() {
     return {
       store, 
-      message: 'App main'
+      message: 'App main',
+      quickActiveIndex: 0,
     }
   },
   components: {
-    AppParagraph
+    AppParagraph,
+    
   },
   methods: {
     checkData() {
       if(store.userEmail.trim() != '') {
         console.log('userEmail: ', store.userEmail);
       }  
+    },
+    quickActive(i) {
+      console.log('cliccata lable');
+      this.quickActiveIndex = i;
     }
   },
 }
@@ -128,14 +135,14 @@ export default {
             <AppParagraph />
             <div class="card">
               <div class=" d-flex justify-content-between lable-container">
-                <div class="card-lable" :class="{'active' : item.active == true}" v-for="(item, i) in store.quickStart" :key="i">
-                  <div>
+                <div class="card-lable" :class="{'active' : this.quickActiveIndex == i}" v-for="(item, i) in store.quickStart" :key="i">
+                  <div @click="quickActive(i)">
                     {{ item.itemName }}
                   </div>
                 </div>
               </div>
               <div v-for="(item, i) in store.quickStart" :key="i">
-                <div class="d-flex" v-if="item.active == true">
+                <div class="d-flex" v-if="this.quickActiveIndex == i">
                   <span>$</span>
                   <p>{{ item.commandOne }}</p>
                   <span>-g</span>
@@ -290,7 +297,6 @@ main {
     text-decoration: none;
     padding: 4px 0;
     font-weight:bold;
-    //il colore $textBlue non sembra lo stesso del riferimento, ma neanche il $mainBlue. Problema di schermo?
     color: $textBlue;
   }
 }
@@ -307,7 +313,7 @@ main {
   background-color: $mainBgblue;
   color: $mainBlue;
   margin-bottom: 35px;
-  // box-shadow: 1px 1px 8px 0 $mainBlue;
+  
 }
 
 #quick-start {
@@ -330,13 +336,15 @@ main {
       border-radius: 8px;
       margin-bottom: 20px;
       .card-lable {
-        padding: 10px 30px;
         width: 25%;
         font-weight: bold;
         border-radius: 8px;
 
         &.active {
           background-color: $mainGray;
+        }
+        div {
+          padding: 10px 30px;
         }
 
       }
@@ -399,9 +407,11 @@ main {
     margin-bottom: 20px;
     box-shadow: 0 3px 0 $lightGray;
     &:hover {
-    box-shadow: 0 3px 0 $mainBlue;
-
+      box-shadow: 0 3px 0 $mainBlue;
     }
+    // &:hover {
+    //   box-shadow: 4px 4px 12px $lightGray;
+    // }
 
     .lable {
       border: 1px solid $mainBgblue;
@@ -468,35 +478,6 @@ main {
   }
 }
 
-//debug struttura
-// #features .container {
-//   min-height: 500px;
-//   background-color: lightcoral;
-// }
-// #quick-start .container {
-//   min-height: 500px;
-//   background-color: lightgoldenrodyellow;
-// }
-// #tools .container .my-col-6 {
-//   min-height: 500px;
-//   background-color: lightcoral;
-//   border: 1px solid blue;
-// }
-// #rates .container {
-//   min-height: 500px;
-//   background-color: lightgoldenrodyellow;
-//   .card {
-//     min-height: 250px;
-//     background-color: aqua;
-//     border: 1px solid blue;
-
-//   }
-// }
-// #action .container {
-//   min-height: 500px;
-//   background-color: lightcoral;
-//   border: 1px solid blue;
-// }
 
 
 </style>
